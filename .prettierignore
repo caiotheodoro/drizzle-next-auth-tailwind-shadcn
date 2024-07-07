@@ -1,0 +1,5 @@
+.next
+public
+*.json
+packages
+packages/*

@@ -1,0 +1,12 @@
+stages:
+  - review
+
+gpt-review:
+  stage: review
+  image: "node:18.17"
+  before_script:
+    - npm install -g code-review-gpt
+  script:
+    - code-review-gpt review --ci=gitlab
+  only:
+    - merge_requests
